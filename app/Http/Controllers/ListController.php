@@ -12,11 +12,22 @@ class ListController extends Controller
     	return view('list', compact('items'));
     }
 
+    public function index1(){
+    	$items = Item::all();
+    	return view('practice', compact('items'));
+    }
+
     public function create(Request $request){
     	$item = new Item;
     	$item->item = $request->text;
     	$item->save();
     	return "DONE";
+    }
+
+        public function create1(Request $request){
+    	$item = new Item;
+    	$item->item = $request->text;
+    	$item->save();
     }
 
     public function delete(Request $request){
