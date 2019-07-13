@@ -60,11 +60,11 @@
 
 			    	dataType : "json"
 					})
-    		});
-
-    		$("#addButton").click(function(event){
+    			$("#addItem").val("");
     			$("#items").load(location.href + " #items");
     		});
+
+    		
     	});
     </script>
   </body>
